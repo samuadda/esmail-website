@@ -1,14 +1,13 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
+    "files": [],
+    "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"]
         },
-        "allowJs": true // This allows JavaScript/JSX files
+        "allowJs": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true
     }
 }
