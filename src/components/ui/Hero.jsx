@@ -1,33 +1,26 @@
 import React from "react";
 import { FlipWords } from "./flip-words";
-import { FadeText } from "./fade-text";
-import {TextGenerateEffect} from './text-generate-effect'
 
 const Hero = () => {
-    // introduction paragraph
+    // flipping words
+    const words = ["يسوق", "يبدع", "يحلل", "يفكر", "يبيع"];
+
     return (
-        <div className="relative w-screen h-screen flex justify-center items-center overflow-hidden">
-            {/* the glossy overlay */}
-            <div className="absolute inset-0 w-screen h-screen bg-white/30 backdrop-blur shadow-md p-6" />
-            <video autoPlay loop muted playsInline className=" w-full h-full object-cover">
-                <source src="assets/hero-video.mp4" type="video/mp4" />
-            </video>
-            <p className="absolute right-10 z-10">
-                <TextGenerateEffect words="إسماعيل, أخذ من اسمه الياء يـ" duration={3} filter={false} wordClassName="font-vazirmatn text-xl font-400 text-primary" />
-            </p>
-            <h1 className="absolute bottom-10 right-10 z-10">
-                <FadeText
-                    direction="down"
-                    text="إسماعيل إبراهيم"
-                    className="font-vazirmatn font-600 text-9xl text-white opacity-50"
-                    framerProps={{
-                        show: { transition: { delay: 2, duration: 2 } },
-                    }}
-                />
-            </h1>
+        <div className="relative w-screen h-screen flex justify-center items-center overflow-hidden p-28">
+            <div className="w-1/2 h-full p-10 flex flex-col justify-center items-start gap-8">
+                <h1 className="font-700 text-7xl text-secondary">إسماعيل إبراهيم</h1>
+                <p className="text-lg font-500 ">
+                    أنا هنا لتحويل أفكارك إلى نصوص قوية تلهم جمهورك وتعزز حضورك الرقمي دعنا نعمل معاً لنوصل رسالتك بفعالية وإبداع فقد أخذت من اسمي الياء
+                    <FlipWords words={words} duration={1} className="text-secondary" />
+                </p>
+            </div>
+            <div className="w-1/2 h-full p-10">
+                <div className="w-80 h-96 rounded-xl bg-accent">
+                    <img src="./assets/avatar-1.png" alt="esmail pic" width={350} className="w-full h-full object-contain" />
+                </div>
+            </div>
         </div>
     );
 };
 
 export default Hero;
-
