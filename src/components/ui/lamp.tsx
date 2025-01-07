@@ -23,7 +23,7 @@ export default function LampDemo() {
 
 export const LampContainer = ({ children, className }: { children?: React.ReactNode; className?: string }) => {
     return (
-        <div className={cn("absolute -top-80 flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white bg-opacity-70 w-full z-0", className)}>
+        <div className={cn("absolute -top-72 flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white bg-opacity-70 w-full z-0", className)}>
             <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
                 <motion.div
                     initial={{ opacity: 0.5, width: "30rem" }}
