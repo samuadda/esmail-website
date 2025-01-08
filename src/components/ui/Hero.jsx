@@ -2,6 +2,7 @@ import React from "react";
 import { FlipWords } from "./flip-words";
 import HeroImageEffect from "./HeroImageEffect";
 import { TextGenerateEffect } from "./text-generate-effect";
+import { ArrowRight01Icon } from "hugeicons-react";
 
 const Hero = () => {
     // flipping words
@@ -19,9 +20,8 @@ const Hero = () => {
                     <FlipWords words={words} duration={1} className="text-secondary text-lg font-800" />
                 </p>
             </div>
-            <div className="w-1/2 h-full p-10">
+            <div className="w-1/2 h-full p-10 flex">
                 <div className="">
-                    {/* <img src="./assets/avatar-1.png" alt="esmail pic" width={300} className="w-full h-full object-contain" /> */}
                     <HeroImageEffect
                         imageSrc="./assets/avatar-1.png"
                         altText="Hero Image"
@@ -29,7 +29,17 @@ const Hero = () => {
                         intensity={10} // Adjust the intensity as needed
                     />
                 </div>
-                <div></div>
+                <div className="relative flex flex-col h-full justify-between">
+                    <div className="relative left-10">
+                        <div className="bg-secondary text-white py-1 px-4 rounded-full">كاتب محتوى</div>
+                    </div>
+                    <div className="relative -left-24">
+                        <div className="bg-accent text-white py-1 px-4 rounded-full">صانع محتوى</div>
+                    </div>
+                    <div className="relative -left-5">
+                        <div className="bg-primary text-white py-1 px-4 rounded-full">مدير إبداعي</div>
+                    </div>
+                </div>
             </div>
         </div>
     );
