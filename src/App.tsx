@@ -1,6 +1,6 @@
-import { LampContainer } from "./components/ui/lamp";
-import Hero from "./components/ui/Hero";
-import NavBar from "./components/ui/NavBar";
+import { LampContainer } from "./components/pages/lamp";
+import Hero from "./components/pages/Hero";
+import NavBar from "./components/pages/NavBar";
 
 function App() {
     return (

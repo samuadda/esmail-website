@@ -27,16 +27,12 @@ export default {
     			'500': '500',
     			'600': '600',
     			'700': '700',
-    			'800': '800',
     			'900': '900'
     		},
     		colors: {
     			primary: '#0d2b4c',
     			secondary: '#fd2862',
-				accent: '#28bea1',
-				coPrimary: "#FF8C00",
-				coSecondary:"#28FD96" ,
-				coAccent:"#BE2828",
+    			accent: '#28bea1',
     			'color-1': 'hsl(var(--color-1))',
     			'color-2': 'hsl(var(--color-2))',
     			'color-3': 'hsl(var(--color-3))',
@@ -46,7 +42,8 @@ export default {
     		animation: {
     			rainbow: 'rainbow var(--speed, 2s) infinite linear',
     			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
-    			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear'
+    			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
+    			'shiny-text': 'shiny-text 8s infinite'
     		},
     		keyframes: {
     			rainbow: {
@@ -74,6 +71,14 @@ export default {
     				},
     				'100%': {
     					transform: 'translateZ(0) rotate(360deg)'
+    				}
+    			},
+    			'shiny-text': {
+    				'0%, 90%, 100%': {
+    					'background-position': 'calc(-100% - var(--shiny-width)) 0'
+    				},
+    				'30%, 60%': {
+    					'background-position': 'calc(100% + var(--shiny-width)) 0'
     				}
     			}
     		}

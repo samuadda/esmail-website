@@ -10,7 +10,7 @@ const Hero = () => {
 
     return (
         <div className="relative w-screen h-screen flex justify-center items-center overflow-hidden p-28">
-            <div className="w-1/2 h-full flex flex-col justify-center items-start gap-8">
+            <div className="w-1/2 h-full flex flex-col justify-center items-start gap-7">
                 <h1 className="font-700 text-8xl text-secondary">إسماعيل إبراهيم</h1>
                 <p className="">
                     <TextGenerateEffect
@@ -20,7 +20,7 @@ const Hero = () => {
                         flipWords={<FlipWords wordss={["يسوق", "يبدع", "يحلل", "يفكر", "يبيع"]} duration={1000} className="text-secondary text-lg font-800 inline" />}
                     />
                 </p>
-                <div className="relative flex justify-around w-full mt-10">
+                <div className="relative flex justify-around w-full mt-5">
                     <div className="bg-accent text-lg text-center text-white py-1 px-8 rounded-full cursor-pointer ">كاتب محتوى</div>
                     <ArrowLeft01Icon size={40} color={"#eb455f"} variant={"stroke"} />
                     <div className="bg-accent text-lg text-center text-white py-1 px-8 rounded-full cursor-pointer">صانع محتوى</div>
