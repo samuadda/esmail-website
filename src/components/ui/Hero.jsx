@@ -2,7 +2,7 @@ import React from "react";
 import { FlipWords } from "./flip-words";
 import HeroImageEffect from "./HeroImageEffect";
 import { TextGenerateEffect } from "./text-generate-effect";
-import { ArrowRight01Icon } from "hugeicons-react";
+import { ArrowLeft01Icon } from "hugeicons-react";
 
 const Hero = () => {
     // flipping words
@@ -14,31 +14,28 @@ const Hero = () => {
                 <h1 className="font-700 text-8xl text-secondary">إسماعيل إبراهيم</h1>
                 <p className="">
                     <TextGenerateEffect
-                        className="text-lg font-500"
+                        className="text-lg font-500 inline"
                         words="أنا هنا لتحويل أفكارك إلى نصوص قوية تلهم جمهورك وتعزز حضورك الرقمي دعنا نعمل معاً لنوصل رسالتك بفعالية وإبداع فقد أخذت من اسمي الياء"
+                        wordClassName="inline text-primary"
+                        flipWords={<FlipWords wordss={["يسوق", "يبدع", "يحلل", "يفكر", "يبيع"]} duration={1000} className="text-secondary text-lg font-800 inline" />}
                     />
-                    <FlipWords words={words} duration={1} className="text-secondary text-lg font-800" />
                 </p>
+                <div className="relative flex justify-around w-full mt-10">
+                    <div className="bg-accent text-lg text-center text-white py-1 px-8 rounded-full cursor-pointer ">كاتب محتوى</div>
+                    <ArrowLeft01Icon size={40} color={"#eb455f"} variant={"stroke"} />
+                    <div className="bg-accent text-lg text-center text-white py-1 px-8 rounded-full cursor-pointer">صانع محتوى</div>
+                    <ArrowLeft01Icon size={40} color={"#eb455f"} variant={"stroke"} />
+                    <div className="bg-accent text-lg text-center text-white py-1 px-8 rounded-full cursor-pointer">مدير إبداعي</div>
+                </div>
             </div>
-            <div className="w-1/2 h-full p-10 flex">
+            <div className="w-1/2 h-full p-10 flex justify-center">
                 <div className="">
                     <HeroImageEffect
                         imageSrc="./assets/avatar-1.png"
                         altText="Hero Image"
-                        className="w-[420px]"
+                        className="w-[450px]"
                         intensity={10} // Adjust the intensity as needed
                     />
-                </div>
-                <div className="relative flex flex-col h-full justify-between">
-                    <div className="relative left-10">
-                        <div className="bg-secondary text-white py-1 px-4 rounded-full">كاتب محتوى</div>
-                    </div>
-                    <div className="relative -left-24">
-                        <div className="bg-accent text-white py-1 px-4 rounded-full">صانع محتوى</div>
-                    </div>
-                    <div className="relative -left-5">
-                        <div className="bg-primary text-white py-1 px-4 rounded-full">مدير إبداعي</div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { FlipWords } from "./flip-words";
 
 export const TextGenerateEffect = ({
     words = "",
@@ -8,12 +9,14 @@ export const TextGenerateEffect = ({
     wordClassName = "",
     filter = true,
     duration = 0.5,
+    flipWords,
 }: {
     words: string;
     className?: string;
     wordClassName?: string;
     filter?: boolean;
     duration?: number;
+    flipWords: React.ReactNode; // Accept FlipWords as a prop
 }) => {
     const [scope, animate] = useAnimate();
 
@@ -32,10 +35,12 @@ export const TextGenerateEffect = ({
         );
     }, [animate, words, filter, duration]);
 
+    const wordsArray = words.split(" ");
+
     return (
         <div className={cn("font-bold", className)}>
             <motion.div ref={scope}>
-                {words.split(" ").map((word, idx) => (
+                {wordsArray.map((word, idx) => (
                     <motion.span
                         key={word + idx}
                         className={cn("dark:text-white text-black opacity-0", wordClassName)}
@@ -46,6 +51,14 @@ export const TextGenerateEffect = ({
                         {word}{" "}
                     </motion.span>
                 ))}
+                <motion.span
+                    className={cn("dark:text-white text-black opacity-0", wordClassName)}
+                    style={{
+                        filter: filter ? "blur(10px)" : "none",
+                    }}
+                >
+                    {flipWords}
+                </motion.span>
             </motion.div>
         </div>
     );

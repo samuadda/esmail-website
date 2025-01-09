@@ -4,23 +4,23 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const FlipWords = ({
-    words,
+    wordss,
     duration = 3000, // The duration for each word flip
     className,
 }: {
-    words: string[];
+    wordss: string[];
     duration?: number;
     className?: string;
 }) => {
-    const [currentWord, setCurrentWord] = useState(words[0]);
+    const [currentWord, setCurrentWord] = useState(wordss[0]);
     const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
     // Function to trigger the animation and change the word
     const startAnimation = useCallback(() => {
-        const nextWord = words[words.indexOf(currentWord) + 1] || words[0];
+        const nextWord = wordss[wordss.indexOf(currentWord) + 1] || wordss[0];
         setCurrentWord(nextWord);
         setIsAnimating(true);
-    }, [currentWord, words]);
+    }, [currentWord, wordss]);
 
     // Trigger word flip based on the duration prop
     useEffect(() => {

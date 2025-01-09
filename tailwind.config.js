@@ -33,7 +33,10 @@ export default {
     		colors: {
     			primary: '#0d2b4c',
     			secondary: '#fd2862',
-    			accent: '#28bea1',
+				accent: '#28bea1',
+				coPrimary: "#FF8C00",
+				coSecondary:"#28FD96" ,
+				coAccent:"#BE2828",
     			'color-1': 'hsl(var(--color-1))',
     			'color-2': 'hsl(var(--color-2))',
     			'color-3': 'hsl(var(--color-3))',
