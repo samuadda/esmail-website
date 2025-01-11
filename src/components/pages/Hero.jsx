@@ -3,6 +3,7 @@ import { FlipWords } from "./flip-words";
 import HeroImageEffect from "./HeroImageEffect";
 import { TextGenerateEffect } from "./text-generate-effect";
 import { ArrowLeft01Icon } from "hugeicons-react";
+import { motion } from "motion/react";
 
 const Hero = () => {
     // flipping words
@@ -29,14 +30,14 @@ const Hero = () => {
                 </div>
             </div>
             <div className="w-1/2 h-full p-10 flex justify-center">
-                <div className="">
+                <motion.div initial={{ scale: 0 }} animate={{ scale: [0.8,1.5,1] }}>
                     <HeroImageEffect
                         imageSrc="./assets/avatar-1.png"
                         altText="Hero Image"
                         className="w-[450px]"
                         intensity={10} // Adjust the intensity as needed
                     />
-                </div>
+                </motion.div>
             </div>
         </div>
     );
