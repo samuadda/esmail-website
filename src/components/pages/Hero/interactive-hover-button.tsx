@@ -13,7 +13,7 @@ const InteractiveHoverButton = React.forwardRef<HTMLButtonElement, InteractiveHo
         return (
             <button
                 ref={ref}
-                className={cn(`group relative w-32 cursor-pointer overflow-hidden rounded-xl ${borderColor} py-2 px-3 text-center font-semibold`, className)}
+                className={cn(`group relative w-32 cursor-pointer overflow-hidden rounded-full ${borderColor} py-2 px-3 text-center font-semibold`, className)}
                 {...props}
             >
                 <span className="inline-block translate-x-1 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">{text}</span>

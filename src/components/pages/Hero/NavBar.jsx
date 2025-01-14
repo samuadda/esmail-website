@@ -1,4 +1,5 @@
 import InteractiveHoverButton from "./interactive-hover-button";
+import { motion } from "motion/react";
 
 const NavBar = () => {
     const navItems = [
@@ -10,7 +11,7 @@ const NavBar = () => {
 
 
     return (
-        <nav className="w-full flex justify-between items-center px-28 py-5 top-0 fixed z-50 backdrop-blur-md bg-white/30 border-b border-white/20">
+        <motion.nav initial={{top:'-82px'}} animate={{top:0}} transition={{duration:1, type:'tween'}} className="w-full flex justify-between items-center px-28 py-5 top-0 fixed z-50 backdrop-blur-md bg-white/30 border-b border-white/20">
             <div>
                 <ul className="flex gap-10 text-lg items-center">
                     {navItems.map(item => {
@@ -32,7 +33,7 @@ const NavBar = () => {
             <div className="flex items-center gap-3">
                 <InteractiveHoverButton text="خلنا نتواصل" className="text-white " borderColor="bg-primary" dotColor="bg-primary" />
             </div>
-        </nav>
+        </motion.nav>
     );
 };
 
