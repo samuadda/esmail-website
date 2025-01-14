@@ -27,26 +27,31 @@ const Hero = () => {
                 </p>
                 <div className="relative flex justify-around w-full mt-5">
                     <motion.div
-                        initial={{ right: "-100px", opacity: 0 }}
-                        animate={{ right: 0, opacity: 1, type: "tween" }}
+                        initial={{ right: "-100px", opacity: 0, filter: "blur(10px)" }}
+                        animate={{ right: 0, opacity: 1, type: "tween", filter: "blur(0px)" }}
+                        transition={{ duration: 0.8 }}
                         className="relative bg-accent text-lg text-center text-white py-1 px-8 rounded-full  "
                     >
                         كاتب محتوى
                     </motion.div>
-                    <ArrowLeft01Icon size={40} color={"#eb455f"} variant={"stroke"} />
+                    <motion.span initial={{ right: "-100px", opacity: 0 }} animate={{ right: 0, opacity: 1, type: "tween" }} transition={{ delay: 0.2, duration: 1 }} className="relative">
+                        <ArrowLeft01Icon size={40} color={"#eb455f"} variant={"stroke"} className="relative" />
+                    </motion.span>
                     <motion.div
-                        initial={{ right: "-100px", opacity: 0 }}
-                        animate={{ right: 0, opacity: 1, type: "tween" }}
-                        transition={{ delay: 0.5 }}
+                        initial={{ right: "-100px", opacity: 0, filter: "blur(10px)" }}
+                        animate={{ right: 0, opacity: 1, type: "tween", filter: "blur(0px)" }}
+                        transition={{ delay: 0.5, duration: 1 }}
                         className="relative bg-accent text-lg text-center text-white py-1 px-8 rounded-full "
                     >
                         صانع محتوى
                     </motion.div>
-                    <ArrowLeft01Icon size={40} color={"#eb455f"} variant={"stroke"} />
+                    <motion.span initial={{ right: "-100px", opacity: 0 }} animate={{ right: 0, opacity: 1, type: "tween" }} transition={{ delay: 0.7, duration: 1.2 }} className="relative">
+                        <ArrowLeft01Icon size={40} color={"#eb455f"} variant={"stroke"} />
+                    </motion.span>
                     <motion.div
-                        initial={{ right: "-100px", opacity: 0 }}
-                        animate={{ right: 0, opacity: 1, type: "tween" }}
-                        transition={{ delay: 0.8 }}
+                        initial={{ right: "-100px", opacity: 0, filter: "blur(10px)" }}
+                        animate={{ right: 0, opacity: 1, type: "tween", filter: "blur(0px)" }}
+                        transition={{ delay: 0.8, duration: 1.2 }}
                         className="relative bg-accent text-lg text-center text-white py-1 px-8 rounded-full "
                     >
                         مدير إبداعي
@@ -56,7 +61,7 @@ const Hero = () => {
             <div className="w-1/2 h-full p-10 flex justify-center">
                 <motion.div initial={{ scale: 0 }} animate={{ scale: [0.8, 1.1, 1] }}>
                     <HeroImageEffect
-                        imageSrc="./assets/avatar-1.png"
+                        imageSrc="./assets/avatar-1.png" //main avatar
                         altText="Hero Image"
                         className="w-[450px]"
                         intensity={10} // Adjust the intensity as needed

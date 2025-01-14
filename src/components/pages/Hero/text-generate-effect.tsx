@@ -8,7 +8,7 @@ export const TextGenerateEffect = ({
     className = "",
     wordClassName = "",
     filter = true,
-    duration = 0.5,
+    duration = 0.1,
     flipWords,
 }: {
     words: string;
