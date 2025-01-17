@@ -1,14 +1,17 @@
 import React from "react";
-import Marquee from "./marquee";
+import { motion } from "motion/react";
 
 const Portfolio = () => {
 
     return (
-        <div className="w-screen h-screen">
-            <Marquee className="h-96">
-                <img src="./assets/logo-1.svg" alt="" />
-                <img src="./assets/logo-2.svg" alt="" />
-            </Marquee>
+        <div className="w-screen h-screen p-28 bg-primary">
+            <motion.h1
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{delay:0.3, duration:1}}
+                className="text-secondary text-5xl font-500">
+                أكثر من...
+            </motion.h1>
         </div>
     );
 };
