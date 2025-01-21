@@ -19,7 +19,7 @@ const Portfolio = () => {
 
 
     return (
-        <div className="relative w-screen h-screen p-28 ">
+        <div className="relative w-screen h-screen p-28 bg-primary">
             <BackgroundBeams />
             <PageTitle title="أكثر من..." />
             <div className="flex flex-col items-center gap-28 p-28">

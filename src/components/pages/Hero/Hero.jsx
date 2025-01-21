@@ -11,7 +11,7 @@ const Hero = () => {
     const words = ["يسوق", "يبدع", "يحلل", "يفكر", "يبيع"];
 
     return (
-        <div className="relative w-screen h-screen flex justify-center items-center overflow-hidden p-28">
+        <div className="relative w-screen h-screen flex justify-center items-center overflow-hidden p-28 ">
             <div className="w-1/2 h-full flex flex-col justify-center items-start gap-7">
                 <h1 className="font-700 text-8xl text-secondary">
                     <BlurText text="إسماعيل إبراهيم" delay={0} animateBy="words" direction="bottom" />

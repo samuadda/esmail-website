@@ -7,7 +7,7 @@ const PageTitle = ({ title = "هات عنوانك", color = "secondary" }) => {
             // initial={{ x: 0 }}
             // whileInView={{ x: 5}}
             // transition={{ delay: 0.3, duration: 1 }}
-            className={`relative top-0 text-center text-6xl font-900 ${color === "secondary" ? "text-secondary" : `text-${color}`}`}
+            className={`relative top-0 text-center text-6xl font-900 ${color === "secondary" ? "text-white" : `text-${color}`}`}
         >
             {title}
         </motion.h3>
